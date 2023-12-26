@@ -72,6 +72,10 @@ body {
     float: right;
 }
 
+.wrapper.advahancedtol {
+    margin-left: 12vw;
+    width: 88vw;
+}
 
 @media screen and (max-width: 480px) {
 
@@ -87,4 +91,5 @@ body {
         padding: 5px;
     }
 
+    
 }
