@@ -9,252 +9,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:aliceblue;
-    font-family:monospace;
+    color:black;
+    /* font-family:monospace; */
     /* border-radius: 25px; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
-h2 {
-    background-color: #5B9EC8;
-    margin-bottom: 1vh;
-    padding-left: 2vw;
-    width: 100%;
-    color: #070F22;
-}
 
-.f-item-2 {
-    /* background-color: #5B9EC8; */
-}
+/* h1 { font-size: 24px; padding-bottom: 5px; }
+h2 { font-size: 18px; padding-bottom: 5px; }
+h3 { font-size: 18px; padding-bottom: 5px; }
+h5 { font-size: 16px; padding-bottom: 5px;} */
 
 body {
-    padding: 10px;
-    background-color: white;
-    /* display: none; */
-    background: #070F22;
-    animation: animazzzzah 1s ;
+    background-color: rgb(124, 164, 199);
 }
 
-@keyframes animazzzzah {
-    from {background-color: black;}
-    to {background-color: #070F22;}
-}
-
-.f-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.banner {
-    height: 140px;
-    /* background-color: red; */
-    /* background-image: url("coming-soon-4.jpg"); */
-    background-size: cover;
-    background-position: no-repeat;
-    margin: -10px;
-    justify-content: center;
-    align-items: center;
-
-    border-style: solid;
-    border-width: 1px 1px 0px 1px;
-    border-color: #59EAFD;
-}
-
-.footer {
-    height: 140px;
-    /* background-color: red; */
-    /* background-image: url("coming-soon-4.jpg"); */
-    background-size: cover;
-    background-position: no-repeat;
-    /* margin: -10px; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
-    border-color: red;
-}
-
-img.profile-pic {
-    height: 10vh;
-}
-
-.f-item-1 {
-    border: 1px solid white;
-    flex: calc(100% - 0.5em);
-    min-height: 100px;
-    padding: 10px;
-    margin: 0.2em;
-}
-
-.f-item-2 {
-    border: 1px solid white;
-    flex: calc(50% - 0.5em);
-    min-height: 100px;
-    padding: 10px;
-    margin: 0.2em;
-}
-
-.f-item-1-2 {
-    border: 1px solid white;
-    flex: calc(10% - 0.5em);
-    min-height: 100px;
-    padding: 10px;
-    margin: 0.2em;
-}
-
-
-#menu-top {
-    display: flex;
-}
-
-#menu-side {
-    display: none;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    width: 100%;
-    align-self: flex-start;
-
-}
-
-#menu-side > a {
-    width:100% !important;
-    display: flex !important;
-}
-
-.f-item-3 {
-    border: 1px solid white;
-    flex: calc(30% - 0.5em);
-    min-height: 100px;
-    padding: 10px;
-    margin: 0.2em;
-}
-
-
-.f-item-4 {
-    border: 1px solid white;
-    flex: calc(25% - 0.5em);
-    min-height: 100px;
-    padding: 10px;
-    margin: 0.2em;
-}
-
-.navbar {
-    border: 1px solid black;
-    display: flex;
-    max-height: 50px; /*this height is to make menu container height fixed when submenu appear*/ 
-}
-
-#menu-side > a,
-.navbar a {
-    border: 1px black;
-    color: rgb(255, 255, 255);     
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-
-  }
-  
-  /* Change color on hover */
-  #menu-side > a:hover,
-  .navbar a:hover {
-    border: 1px solid #59EAFD;
-    /* background-color: #ddd; */
-    color: #F20070;
-  }
-
-  strong {
-    color: #F20070;
-  }
-.nav-mobile {
-    display: none;
-}
-
-/* Next line for next container */
-.break {
-    flex-basis: 100%;
-    height: 10px;
-}
-
-
-#menu-top > .a-right {
+.wrapper {
     position: absolute;
-    right: 0px;
+    background-color: grey;
+    border: 1px solid yellow;
+    min-height: 20vh;
+    margin-left: 20vw;
+    width: 60vw;
+    padding: 5px;
 }
 
-/* submenu test, implementation not very good becaouse using flex */
-.menu-sub {
-    /* flex-basis: 100%; */
-    height: auto;
-    width: 100px;
-    /* margin-top: 40px;
-    margin-left:-80px; */
-    background-color: blue;
-    display: none;
-    z-index: 1;
-    /* width: 50%; */
+.wrapper.advahanced {
+    margin-left: 0vw;
+    width: 100vw;
 }
 
-.menu-sub > a {
+.container {
+    font-size:0px;  /*Nak buang space bila pakai inline block dkt child sebab x nak pakai flex oiiiiiiiiii ala babun*/
+    position: relative;
     display: block;
-    background-color: black;
+    background-color: rgb(100, 96, 96);
+    border: 1px solid red;
+    /* padding: 10px; */
+    padding: 10px 10px 10px 10px;
 }
 
-a.menu-item-sub:hover {
-    /* align-self: flex-start; */
-    /* background-color: #59EAFD; */
+.item {
+    position: relative;
+    font-size: 14px;
+    /* margin: 0px; */
+    background-color: aliceblue;
+    border: 1px solid black;
+    min-height: 10vh;
+    vertical-align: top;
+    padding: 10px 5px 10px 5px;
 }
 
-.menu-item-sub:hover + div {
-    /* float: left; */
-    background-color: blue;
-    text-decoration: underline;
-    display: block;
+.item.row { display: block; width: 100%; }
+
+.item.col { display: inline-block; min-width: 20%; }
+.item.col-2 { display: inline-block; width: 50%; }
+.item.col-3 { display: inline-block; width: 33.33%; }
+.item.col-4 { display: inline-block; width: 25%; }
+
+
+.float-right {
+    float: right;
 }
 
-.menu-item-sub + div:hover {
-    /* float: left; */
-    background-color: red;
-    text-decoration: underline;
-    display: block;
-}
-
-/* sub tst */
 
 @media screen and (max-width: 480px) {
 
-    body {
-        padding-bottom:8vh;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-
-    .banner, .footer {
-        height: 8vh;
-        
-    }
-
-    body, h2, span, p { font-size: 16px; }
-    h1 { font-size: 18px; }
-
-    .f-item-1, .f-item-2, .f-item-3 {
-        letter-spacing: 0.05em;
-        flex: 100%;
+    
+    .wrapper {
+        margin-left: 0vw;
+        width: 100vw;
         padding: 5px;
-        margin: 0.2em;
-    }
-    .a-right {
-        display: none;
     }
 
-    .navbar {
-        display: inline-block;
-        position: fixed;
-        bottom: 0;
-        z-index: 2;
-        padding: 10px;
-        margin-left: -10px;
-        width: 100%;
-        height: calc(100%/10);
-        border: 1px solid #59EAFD;
-        border-radius: 10px;
-        background-color: black;
-    }
 }
