@@ -245,7 +245,7 @@ div.float-menu-mobile-toggle {
         top: 10vh;
         left: 5vw;
         float: left;
-        height: 80vh;
+        height: auto;
         width: 90vw;
         z-index: 1;
     }
