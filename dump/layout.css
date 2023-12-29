@@ -72,6 +72,8 @@ body {
 .item.col-2.ratio-small { width: 20% !important;}
 .item.col-2.ratio-big { width: 80% !important; }
 
+
+
 .item.main {
     min-height: 100vh;
 }
@@ -172,9 +174,31 @@ body {
     display: block;
 }
 
-
-
 /*menu side/row? col? end*/
+
+/* float menu test */
+div.float-menu {
+    background-color: #59EAFD;
+    border: 1px solid red;
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+    float: left;
+    z-index: 1;
+}
+
+div.float-menu.full-width {  
+    width: 50px;
+}
+/* float menu test */
+
+
+/* mobile menu test */
+div.float-menu-mobile,
+div.float-menu-mobile-toggle {
+    display: none;
+}
+/*mobile menu test */
 
 @media screen and (max-width: 480px) {
 
@@ -190,5 +214,45 @@ body {
         padding: 5px;
     }
 
+    .item.ratio-small.mobile-hide {
+        display: none !important;
+    }
+    .item.ratio-big.mobile-fill {
+        width: 100% !important;
+    }
+
+    /* mobile menu start */
+    div.float-menu-mobile-toggle {
+        background-color: #070f2233;
+        border: 1px double yellow;
+        height: 80px;
+        width: 80px;
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        margin: 15px;
+        z-index: 1;
+        border-radius: 25px;
+    }
+
     
+    div.float-menu-mobile {
+        background-color: #070f2233;
+        border: 2px double red;
+        /* display: block; */
+        position: fixed;
+        top: 10vh;
+        left: 5vw;
+        float: left;
+        height: 80vh;
+        width: 90vw;
+        z-index: 1;
+    }
+
+    div.float-menu-mobile-toggle:hover + div.float-menu-mobile {
+        display: block;
+    }
+
+    /*mobile menu end*/
 }
