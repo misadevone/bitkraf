@@ -1,80 +1,86 @@
 // matching different menu with different location omg
 // menu list
-const conf_menu = ['intro', 'contact','login', 'external-w3schools',['item1', 'calculator','sub2','sub3'], ['item2', 'calculator','sub2','sub3'], 'menu-switch'];
+const conf_menu = ['intro', 'contact','login', ['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
 
-
-// const contentMain = document.getElementById("main-content");
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
-// const el1 = document.querySelector('[data-id="box1"]');
-// const el2 = document.querySelector('[data-id]');
-// menuLoc[0].getAttribute('data-build-menu')
 
 if(menuLoc.length > 0) { 
     console.log(menuLoc.length+" menu location found");
 
     if(conf_menu.length > 0) { 
         console.log(conf_menu.length+" menu item found, didnt count submenu ahahaha");
-        buildMenu();
+
+        var z = buildMenu(conf_menu);
+
+        for(i=0; i< menuLoc.length; i++) {
+            menuLoc[i].innerHTML = z;
+            menuLoc[i].classList.add("menu-"+menuLoc[i].getAttribute('data-build-menu'));
+        }
+
+        loadContent('intro');
     }
 }
 
 
-function buildMenu() {
-    var a = "";
+function buildMenu(menuList) {
+    var menu = "";
 
-    for(var i=0; i < conf_menu.length; i++){
-        if(conf_menu[i].includes('-')) {
-            var menuType = conf_menu[i].substring(0, conf_menu[i].lastIndexOf('-'));
-            var menuItem = conf_menu[i].slice(conf_menu[i].indexOf('-') + 1);
-    
-            console.log("menu type is: "+menuType);
-    
-            if( menuType == "menu" ) {
-                a += "<a href='#"+conf_menu[i]+"' class='a-right' onClick='"+'toggleLayout("'+conf_menu[i]+'")'+"'>"+conf_menu[i]+"</a>";
-            } else if( menuType == "list") {
-                
-            } else if( menuType == "external") {
-                a += "<a href='https://www."+menuItem+".com/' target='_blank'>"+menuItem+"</a>";
-            }
-    
-        }else if(conf_menu[i] instanceof Array ) {
-            var b ="";
+    for(var i=0; i < menuList.length; i++) {
+        if(menuList[i] instanceof Array) {            
+            menu += "<div class='dropdown'>";
+            menu += "<a href='#!'>"+menuList[i][0]+">></a>";
+            menu += "<div class='dropdown-item'>";
+            menu += buildMenu(menuList[i].splice(1));
+            menu += "</div></div>";
 
-            b += "<div class='dropdown'>";
-            b += "<a href='#!'>"+conf_menu[i][0]+"</a>";
-            b += "<div class='dropdown-item'>";
-
-            conf_menu[i].forEach((item2, index2)=>{
-                if(item2 != conf_menu[i][0]) {
-                    // b += "<a href="#!">sub 1</a>";
-                    b += "<a href='#"+item2+"' onClick='"+'loadContent("'+item2+'")'+"'>"+item2+"</a>";
-                }
-            });
-
-            b += "</div></div>";
-            a += b;
-    
         } else {
-            a += "<a href='#"+conf_menu[i]+"' onClick='"+'loadContent("'+conf_menu[i]+'")'+"'>"+conf_menu[i]+"</a>";
+            menu += assembleMenu(typeOfMenu(menuList[i]), getMenuName(menuList[i]));
         }
     }
-
-    for(i=0; i< menuLoc.length; i++) {
-        menuLoc[i].innerHTML = a;
-        menuLoc[i].classList.add("menu-"+menuLoc[i].getAttribute('data-build-menu'));
-    }
+    return menu;
 }
 
+function getMenuName(item){
+    var a = "";
+    if(item.includes('-')) {
+        a = item.slice(item.indexOf('-') + 1);
+    } else {
+        a = item;
+    }
+    return a;
+}
 
+function typeOfMenu(menu) {
+    if(menu.includes('-') && !(menu instanceof Array)) {
+        menuType = menu.substring(0, menu.lastIndexOf('-'));
+        
 
-function drawContent(e){
-    var d = document.getElementById("content-"+e);
-    targetLoc[0].innerHTML = d.innerHTML;
+    } else if (menu instanceof Array) {
+        menuType = "list";
+
+    } else {
+        menuType = "link";
+    }
+
+    return menuType;
+}
+
+function assembleMenu(type, item) {
+    var a = "";
+    if(type == "link") {
+        a += "<a href='#"+item+"' onClick='"+'loadContent("'+item+'")'+"'>"+item+"</a>";
+
+    } else if(type == "external") {
+        a += "<a href='https://"+item+"' target='_blank'>"+item+"</a>";
+
+    } else {
+        a = "error ahahaha";
+    }
+    return a;
 }
 
 function loadContent(e){
-    drawContent(e);
+    var d = document.getElementById("content-"+e);
+    targetLoc[0].innerHTML = d.innerHTML;
 }
-
-

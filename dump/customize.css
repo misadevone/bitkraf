@@ -1,0 +1,94 @@
+/* Changing value here is save kot XD */
+.reference {
+    color: #F3FF4B;
+    color: #F20070;
+    color: #59EAFD;
+    color: #5B9EC8;
+    color: #070F22;
+}
+
+* {
+    color:white;
+    font-family:monospace;
+    /* border-radius: 25px; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+h1 { font-size: 24px; padding-bottom: 5px; }
+h2 { font-size: 18px; padding-bottom: 5px; background-color: #1c3849; padding: 2px 0 5px 4px}
+h3 { font-size: 18px; padding-bottom: 5px; }
+h5 { font-size: 16px; padding-bottom: 5px; }
+a { font-size: 13px; text-decoration: none;}
+
+strong {color: #F20070}
+
+body {
+    background-color: #070F22;
+}
+
+.wrapper {
+    background-color: #070F22;
+    border: 1px solid #59EAFD;
+}
+
+
+.container {
+    background-color: #070F22;
+    border: 0px solid white;
+}
+
+
+.item {
+    background-color: #070F22;
+    border: 0px solid white;
+}
+
+
+a:hover {
+    color: #F20070;
+    background-color: #0d1b3d;
+}
+
+/* menu section start */
+.row.menu-row,
+.row.menu-col {
+    /* border: 1px solid white; */
+    background-color: #070F22; 
+}
+
+.menu-row .dropdown .dropdown-item a,
+.item.row.menu-row a,
+.item.row.menu-row .dropdown a,
+.item.row.menu-col a,
+.item.row.menu-col .dropdown a {
+    border: 0px solid black;
+}
+
+.menu-row .dropdown .dropdown-item:hover,
+.menu-row .dropdown a:hover +.dropdown-item,
+.menu-col .dropdown .dropdown-item:hover,
+.menu-col .dropdown a:hover +.dropdown-item{
+    background-color: #070F22;
+    border: 1px solid #070F22;
+}
+
+
+/* menu section end */
+
+
+button {
+    padding: 5px;
+    color: black;
+}
+
+.item.card {
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 480px) {
+    .item.card {
+        width: 100%;
+    }
+    
+    h2 {text-align: center;}
+}

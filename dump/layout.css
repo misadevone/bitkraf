@@ -1,4 +1,3 @@
-
 .reference {
     color: #F3FF4B;
     color: #F20070;
@@ -6,6 +5,11 @@
     color: #5B9EC8;
     color: #070F22;
 }
+
+:root {
+    --mainCol: red;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +28,15 @@ a { font-size: 14px; }
 
 body {
     background-color: rgb(124, 164, 199);
+}
+
+body div#float-overlay {
+    float: left;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 100vh;
+    width: 100vw;
 }
 
 .wrapper {
@@ -57,9 +70,10 @@ body {
     /* margin: 0px; */
     background-color: aliceblue;
     border: 1px solid black;
-    min-height: 10vh;
+    min-height: auto;
     vertical-align: top;
     padding: 10px 5px 10px 5px;
+    /* overflow: hidden; */
 }
 
 .item.row { display: block; width: 100%; }
@@ -104,11 +118,9 @@ body {
 
 .item.row.menu-col a,
 .item.row.menu-col .dropdown {
-    display: block;
-    float: left;
+    display: inline-block;
     height: 55px;
-    /* display: block; */
-    max-width: 15%;
+    min-width: 10%;
     padding: 0px;
     overflow: hidden;
 }
@@ -116,7 +128,7 @@ body {
 .menu-col .dropdown .dropdown-item {
     display: none;
     position: absolute;
-    margin-top: 50px;
+    margin-top: -5px;
     z-index: 1;
 }
 
@@ -194,11 +206,15 @@ div.float-menu.full-width {
 
 
 /* mobile menu test */
-div.float-menu-mobile,
+#float-menu-mobile,
 div.float-menu-mobile-toggle {
     display: none;
 }
 /*mobile menu test */
+
+.show {
+    display: block !important;
+}
 
 @media screen and (max-width: 480px) {
 
@@ -237,21 +253,17 @@ div.float-menu-mobile-toggle {
     }
 
     
-    div.float-menu-mobile {
+    div#float-menu-mobile {
         background-color: #070f2233;
-        border: 2px double red;
+        border: 2px double yellow;
         /* display: block; */
         position: fixed;
-        top: 10vh;
+        bottom: 20vh;
         left: 5vw;
         float: left;
         height: auto;
         width: 90vw;
         z-index: 1;
-    }
-
-    div.float-menu-mobile-toggle:hover + div.float-menu-mobile {
-        display: block;
     }
 
     /*mobile menu end*/

@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <!-- <link rel="stylesheet" href="dump/style.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="dump/layout.css">
+    <link rel="stylesheet" href="dump/customize.css">
     <title>misadevone.github.io</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,114 +13,157 @@
 
 </head>
 <body>
-    <div class="float-menu-mobile-toggle">
-        <br>
-        Menu 
-    </div>
-    <div class="float-menu-mobile">
-        <div class="container">
-            <div class="item row" data-build-menu="row">
-                item 3
-            </div>
-        </div>
-    </div>
-    <!-- <div class="float-menu" id="flm1">
-        <a href="#!" onClick="tglSide()">
-            <i class="fa fa-address-book" style="font-size:36px"></i>
-        </a>
-        Test
-    </div> -->
 
     <div class="wrapper" id="wrap-main"> <!-- for  wrapping everything-->
         <div class="container">
-            <h2>1DIMENSON ROW</h2>
-            <div class="item row">
-                <input type="button" value="Toggle Width" id="btn-tgl-width"></button>
-            </div>
-            <div class="item row">
-                <input type="text"/>
-                <button>sambti</button>
-            </div>
-
-            <div class="item row mobile-hide" data-build-menu="col">
-                item 3
-            </div>
+          <center>
+          <h1 style="color: #59EAFD; letter-spacing: 0.1em;">MISADEVONE<small style="font-size: 14px; letter-spacing: 0.05em;"><u>.github.io/hi</u></small></h1></center>
+            <div class="item row mobile-hide" data-build-menu="col"></div>
         </div>
 
         <div class="container">
-        </div>
-
-        <div class="container">
-            <div class="item col-2 ratio-small mobile-hide">
+            <div class="item col-2 ratio-small mobile-hide"  style="border: 1px solid aquamarine">
+                <h5>Welcome: User 1</h5>
                 <img src="dump/profile-pic.jpg" width="100%">
-
+                <a href="#!">[Profile]</a>
+                <a href="#!">[Register]</a>
+                <a href="#!">[Logout]</a>
+                <a href="#!" id="btn-tgl-width">[change width]</a>
+                <br>
                 <div class="item row" data-build-menu="row"></div>
                 
+                
             </div>
-            <div class="item col-2 ratio-big mobile-fill" data-view-target="main">
-                main content
+            <div class="item col-2 ratio-big mobile-fill" data-view-target="main" style="border: 1px solid aquamarine">
+                
             </div>
         </div>
-
         
-        <div class="container">
-            <h1><U>SELAMAT DATING</U></h1>
-            <h2>1DIMENSION COLUMN</h2>
-            <h5>HOI EMPTU SPACE</h5>
-            <small>test</small><br>
-            <div class="item col-2">
-            <h1><U>SELAMAT DATING</U></h1>
-            <h2>1DIMENSION COLUMN</h2>
-            <h5>HOI EMPTU SPACE</h5>
-            <small>test</small><br>
-                item 1 alsjdlajsd aslkjdlakjdla sldajslkdjalsjd aslkdjaslkjdlajd asljdakjdlka jsdlaskjdlkajdlkaj dlakjsdlkjsa dlkajsdlkajslkdjalkd askdajsldjaks dlasjkdjalkdjasjdla skdjalsjdkajdlak dlaksjdlaksjdlkajs dlaskjdalkjd laskjdalksjd lakdjalksjda slkdjasdla slkdjaslkdja lskdajsldkja lsdkjasldkaj ldkasjdalsjdal kdajlskjdalk jdlakjdalsjd ajdlajdk akjdlaskd asdjalkdsjlkasjdla sdlkajdjsdlkajsdjas dlkajdlka dalksjdlkajd alksjdalksjd alksjdalkjd alskdjasld ajdalsdkja daksjdlas dlkasjdlakjd lakdjlakjdla ksdljakdjl sadalkdjalksjd lajdlsa 
-                <small>zaza kakak asd</small>
-                <strong>kaslkkadjsd</strong>
-                <p>pipi</p>
-            </div><div class="item col-2" id="main-content">
-                item 2xx
-            </div><div class="item col-3">
-            </div>
-            <div class="item col-3">
-                <div class="item row menu-col">
-                    <a href="#!">Item 1</a>
-                    <a href="#!">Item 2</a>
-    
-                    <div class="dropdown">
-                        <a href="#!">Other Feturs</a>
-                        <div class="dropdown-item">
-                            <a href="#!">sub 1</a>
-                            <a href="#!">sub 2</a>
-                            <a href="#!">sub 3</a>
-                        </div>
-                    </div>
-    
-                    <a href="#!">User Emmanuelle</a>
-                </div>
-            </div><div class="item col-3">
-                item 3
-            </div>
-            <div class="item col-4">item 4</div>
-            <div class="item col-4">item 4-2</div>
-            <div class="item col-4">item 4</div>
-            <div class="item col-4">item 4</div>
-        </div>
-
     </div>
+
+
+    
+
+    <!-- overlay layout start -->
+    <div id="float-overlay" onClick="toggleView('float-menu-mobile')"></div>
+
+    <div class="float-menu-mobile-toggle">
+        <br><br>
+          <center><a href="#!" onClick="toggleView('float-menu-mobile')" style="padding:20px">[Menu]</a>
+    </div>
+    <div id="float-menu-mobile">
+        <div class="container">
+            <div class="item col-2">
+              <h5>Welcome: User 1</h5>
+                <img src="dump/profile-pic.jpg" width="100%">
+                <br>
+            </div>
+            <div class="item col-2" style="text-align: center; vertical-align: bottom;">
+
+              <a href="#!">[Profile]</a>
+              <a href="#!">[Register]</a>
+              <a href="#!">[Logout]</a>
+              <a href="#!" id="btn-tgl-width">[change width]</a>
+            </div>
+
+            <div class="item row" data-build-menu="row">
+                
+            </div>
+        </div>
+    </div>
+    <!-- overlay layout end -->
+
 </body>
 
 <!-- sekadar kontent start -->
 <div class="content" id="content-intro" style="display:none;">
-    <h1>Intro</h1>asdasd
-</div>
-<div class="content" id="content-contact" style="display:none;">
-    <h1>Contact Me</h1>123123
-</div>
-<div class="content" id="content-login" style="display:none;">
-    <h1>Logan</h1>e12e12e21
-</div>
+    <h2>Intro</h2>
+    <div class="container">
+      <div class="item col"><p><strong>Partial Stack Web Developer</strong> with more than 3 years of experience in designing and developing responsive websites and applications with problem-solving and analytical skills. Strong understanding of web design principles and user experience with responsive design and development. Experienced in creating, designing maintaining rly small database involving object relationship, keys and diagrams. Skilled in collaborating with cross-functional teams to deliver projects on time</p></div>
+      </div>
+      
+      
+      <div class="break"></div>
+      <h2>Skills</h2>
+      <div class="container">
+        <div class="item col-4 card"><strong>HTML</strong>✔<br><small>HTML 5, Responsive, multi device layout</small></div>
+        <div class="item col-4 card"><strong>CSS✔</strong><br><small>Colorful design, debilitating readibility across devices and good UI UX design also Bootstrap</small></div>
+        <div class="item col-4 card"><strong>PHP✔</strong><br><small>Basic function for interface to interact with database such as add, insert, update with sanitization in mind</small></div>
+        <div class="item col-4 card"><strong>Javascript✔</strong><br><small>Make HTML, CSS, PHP, Database process more Dynamike and library like Jquery</small></div>
+        
+        <div style="clear: both;"></div>
+        <div class="item col-4 card"><strong>Mysql/Postgresql✔</strong><br><small>Basic knowledge for both dbms system and relationship such many to many</small></div>
+        <div class="item col-4 card"><strong>MVC Framework✔</strong><br><small>Such as Laravel & Cakephp is I can work with. and Blade.</small></div>
+        <div class="item col-4 card"><strong>CMS✔</strong><br><small>Wordpress & Drupal with plugin and beautiful theme design after buying template.</small></div>
+        <br><br>
+        <h2>Basic Skills in other Programming Language(no framework)</h2>
+        <div class="break"></div>
+        <div class="item col-4 card"><strong>Java✔</strong><br><small></small></div>
+        <div class="item col-4 card"><strong>C++✔</strong><br><small></small></div>
+        <div class="item col-4 card"><strong>Python✔</strong><br><small></small></div>
+    
+  </div>
+  
+   
+  <div class="content" id="content-contact" style="display:none;">
+    <h2>Contact</h2>
+    <div class="container">
+      <div class="item col">
+        <h1><a href="mailto:misaworkietime@gmail.com">misaworkietime@gmail.com</a></h1>
+        [<a href="#!" onClick="(function(){navigator.clipboard.writeText('misaworkietime@gmail.com')})();">copy e-mail</a>]
+      </div>
+    </div>
+  </div>
+  
+  <div class="content" id="content-calculator" style="display:none;">
+    <h2>Calculator</h2>
+      <h5>This is Simple Calculator, Dec 7, 2017</h5>
+      
+      <p>feel free to calculate me....</p>
+      <div class="fakeimg" style="height:auto;">
+        
+      
+      </div><br>
+  </div>
 
+  <div class="content" id="content-login" style="display:none;">
+    <h2>Logan</h2>
+    <img src="dump/logan.png"></img>
+  </div>
+
+  <div class="content" id="content-tutorial" style="display:none;">
+    <h2>Tutorial cara ii untuk membuat teh panas</h2>
+    <div class="item row">
+      Resepi air teh o panas
+      1.
+      
+      1 uncang teh2.
+      
+      500ml air panas3.
+      
+      2 1/2 sudu besar gula
+      Cara-cara
+      1.
+      
+      Masak air hingga mendidih menggunakan pemanas air2.
+      
+      Masukkan air panas ke dalam teko3.
+      
+      Masukkan uncang teh dan rendam sekejap4.
+      
+      Keluarkan uncang the5.
+      
+      Masukkan gula6.
+      
+      Kacau7.
+      
+      Siap untuk dihidang
+    </div>
+  </div>
+  
+  <!-- sekadar konten end -->
 <script src="dump/script.js"></script>
 <script src="dump/menu.js"></script>
 </body>
 </html>
+
