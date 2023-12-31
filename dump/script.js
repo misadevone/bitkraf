@@ -3,7 +3,9 @@ const wrapMain = document.getElementById("wrap-main");
 const overlayScreen = document.getElementById("float-overlay");
 
 btnTglWidth.addEventListener("click", toggleWidth);
-
+let file = "./dump/fetch_inf.txt";
+fetch (file).then(x => x.text()).then(y => document.getElementById("demo").innerHTML = y);
+// fetch (file).then(x => x.text()).then(console.log(y));
 // toggleWidth();
 
 function toggleWidth() {
@@ -23,4 +25,3 @@ function toggleView(target) {
 function toggleOverlay() {
     overlayScreen.classList.toggle("show");
 }
-

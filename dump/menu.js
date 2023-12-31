@@ -1,9 +1,13 @@
 // matching different menu with different location omg
 // menu list
-const conf_menu = ['intro', 'contact','login', ['Reference', 'external-w3schools.com','external-google.com','external-misadevone.github.io/bitkraf']];
+const conf_menu = ['home', 'contact', ['Components','layout','menu','form', 'login'],['Reference', 'external-w3schools.com', 'external-google.com']];
 
+// const contentMain = document.getElementById("main-content");
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
+// const el1 = document.querySelector('[data-id="box1"]');
+// const el2 = document.querySelector('[data-id]');
+// menuLoc[0].getAttribute('data-build-menu')
 
 if(menuLoc.length > 0) { 
     console.log(menuLoc.length+" menu location found");
@@ -18,7 +22,7 @@ if(menuLoc.length > 0) {
             menuLoc[i].classList.add("menu-"+menuLoc[i].getAttribute('data-build-menu'));
         }
 
-        loadContent('intro');
+        loadContent('home');
     }
 }
 
@@ -38,6 +42,7 @@ function buildMenu(menuList) {
             menu += assembleMenu(typeOfMenu(menuList[i]), getMenuName(menuList[i]));
         }
     }
+    // menu += "<div style='clear:both'></div>";
     return menu;
 }
 
@@ -72,7 +77,7 @@ function assembleMenu(type, item) {
         a += "<a href='#"+item+"' onClick='"+'loadContent("'+item+'")'+"'>"+item+"</a>";
 
     } else if(type == "external") {
-        a += "<a href='https://"+item+"' target='_blank'>"+item+"</a>";
+        a += "<a href='https://www."+item+"' target='_blank'>"+item+"</a>";
 
     } else {
         a = "error ahahaha";

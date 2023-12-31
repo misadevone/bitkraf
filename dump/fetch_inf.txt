@@ -1,1 +1,1 @@
-hello from external file!!
+hello from external txt file!!

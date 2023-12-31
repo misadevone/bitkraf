@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <!-- <link rel="stylesheet" href="dump/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="dump/layout.css">
-    <link rel="stylesheet" href="dump/customize.css">
     <title>misadevone.github.io</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
@@ -13,39 +13,81 @@
 
 </head>
 <body>
-
     <div class="wrapper" id="wrap-main"> <!-- for  wrapping everything-->
-        <div class="container">
-          <center>
-          <h1 style="color: #59EAFD; letter-spacing: 0.1em;">MISADEVONE<small style="font-size: 14px; letter-spacing: 0.05em;"><u>.github.io/hi</u></small></h1></center>
-            <div class="item row mobile-hide" data-build-menu="col"></div>
+        <div class="container banner">
+            <span style="font-size:12px">banner goes here</small>
         </div>
 
         <div class="container">
-            <div class="item col-2 ratio-small mobile-hide"  style="border: 1px solid aquamarine">
-                <h5>Welcome: User 1</h5>
+            <div class="item row mobile-hide" data-build-menu="col"></div>
+            
+            <input type="button" value="Toggle Width" id="btn-tgl-width"></button>  
+        </div>
+
+        <div class="container">
+            <div class="item col-2 ratio-small mobile-hide">
                 <img src="dump/profile-pic.jpg" width="100%">
-                <a href="#!">[Profile]</a>
-                <a href="#!">[Register]</a>
-                <a href="#!">[Logout]</a>
-                <a href="#!" id="btn-tgl-width">[change width]</a>
-                <br>
+
                 <div class="item row" data-build-menu="row"></div>
                 
-                
             </div>
-            <div class="item col-2 ratio-big mobile-fill" data-view-target="main" style="border: 1px solid aquamarine">
-                
+            <div class="item col-2 ratio-big mobile-fill" data-view-target="main">
+                main content go here
             </div>
         </div>
+
         
+        <div class="container">
+            <div class="item col-2">
+            </div>
+            
+            <div class="item col-2" id="main-content">
+                item 2xx
+            </div>
+            
+            <div class="item col-3">
+            </div>
+
+            <div class="item col-3">
+                <!-- hardcode menu reference start -->
+                <div class="item row menu-row">
+                    <a href="#!">Item 1</a>
+                    <a href="#!">Item 2</a>
+    
+                    <div class="dropdown">
+                        <a href="#!">Submenu</a>
+                        <div class="dropdown-item">
+                            <a href="#!">sub 1</a>
+                            <a href="#!">sub 2</a>
+                            <a href="#!">sub 3</a>
+                        </div>
+                    </div>
+                    <a href="#!">User Emmanuelle</a>
+                </div>
+                <!-- hardcode menu reference end -->
+
+            </div>
+            
+            <div class="item col-3">
+                item 3
+            </div>
+            <div class="item col-4" id="demo">item 4</div>
+            <div class="item col-4">item 4</div>
+            <div class="item col-4">item 4</div>
+            <div class="item col-4">item 4</div>
+        </div>
+
+
+        <div class="container footer">
+            <span style="font-size:12px">footer goes here</small>
+        </div>
     </div>
 
 
-    
+
 
     <!-- overlay layout start -->
-    <div id="float-overlay" onClick="toggleView('float-menu-mobile')"></div>
+    <div id="float-overlay" onClick="toggleView('float-menu-mobile')">Heloz</div>
 
     <div class="float-menu-mobile-toggle">
         <br><br>
@@ -53,117 +95,74 @@
     </div>
     <div id="float-menu-mobile">
         <div class="container">
-            <div class="item col-2">
-              <h5>Welcome: User 1</h5>
-                <img src="dump/profile-pic.jpg" width="100%">
-                <br>
-            </div>
-            <div class="item col-2" style="text-align: center; vertical-align: bottom;">
-
-              <a href="#!">[Profile]</a>
-              <a href="#!">[Register]</a>
-              <a href="#!">[Logout]</a>
-              <a href="#!" id="btn-tgl-width">[change width]</a>
-            </div>
-
             <div class="item row" data-build-menu="row">
                 
             </div>
         </div>
     </div>
-    <!-- overlay layout end -->
+    <!-- <div class="float-menu" id="flm1">
+        <a href="#!" onClick="tglSide()">
+            <i class="fa fa-address-book" style="font-size:36px"></i>
+        </a>
+        Test
+    </div> -->
 
+    <!-- overlay layout end -->
 </body>
 
 <!-- sekadar kontent start -->
-<div class="content" id="content-intro" style="display:none;">
-    <h2>Intro</h2>
-    <div class="container">
-      <div class="item col"><p><strong>Partial Stack Web Developer</strong> with more than 3 years of experience in designing and developing responsive websites and applications with problem-solving and analytical skills. Strong understanding of web design principles and user experience with responsive design and development. Experienced in creating, designing maintaining rly small database involving object relationship, keys and diagrams. Skilled in collaborating with cross-functional teams to deliver projects on time</p></div>
-      </div>
-      
-      
-      <div class="break"></div>
-      <h2>Skills</h2>
-      <div class="container">
-        <div class="item col-4 card"><strong>HTML</strong>✔<br><small>HTML 5, Responsive, multi device layout</small></div>
-        <div class="item col-4 card"><strong>CSS✔</strong><br><small>Colorful design, debilitating readibility across devices and good UI UX design also Bootstrap</small></div>
-        <div class="item col-4 card"><strong>PHP✔</strong><br><small>Basic function for interface to interact with database such as add, insert, update with sanitization in mind</small></div>
-        <div class="item col-4 card"><strong>Javascript✔</strong><br><small>Make HTML, CSS, PHP, Database process more Dynamike and library like Jquery</small></div>
-        
-        <div style="clear: both;"></div>
-        <div class="item col-4 card"><strong>Mysql/Postgresql✔</strong><br><small>Basic knowledge for both dbms system and relationship such many to many</small></div>
-        <div class="item col-4 card"><strong>MVC Framework✔</strong><br><small>Such as Laravel & Cakephp is I can work with. and Blade.</small></div>
-        <div class="item col-4 card"><strong>CMS✔</strong><br><small>Wordpress & Drupal with plugin and beautiful theme design after buying template.</small></div>
-        <br><br>
-        <h2>Basic Skills in other Programming Language(no framework)</h2>
-        <div class="break"></div>
-        <div class="item col-4 card"><strong>Java✔</strong><br><small></small></div>
-        <div class="item col-4 card"><strong>C++✔</strong><br><small></small></div>
-        <div class="item col-4 card"><strong>Python✔</strong><br><small></small></div>
-    
-  </div>
-  
-   
-  <div class="content" id="content-contact" style="display:none;">
-    <h2>Contact</h2>
-    <div class="container">
-      <div class="item col">
-        <h1><a href="mailto:misaworkietime@gmail.com">misaworkietime@gmail.com</a></h1>
-        [<a href="#!" onClick="(function(){navigator.clipboard.writeText('misaworkietime@gmail.com')})();">copy e-mail</a>]
-      </div>
-    </div>
-  </div>
-  
-  <div class="content" id="content-calculator" style="display:none;">
-    <h2>Calculator</h2>
-      <h5>This is Simple Calculator, Dec 7, 2017</h5>
-      
-      <p>feel free to calculate me....</p>
-      <div class="fakeimg" style="height:auto;">
-        
-      
-      </div><br>
-  </div>
-
-  <div class="content" id="content-login" style="display:none;">
-    <h2>Logan</h2>
-    <img src="dump/logan.png"></img>
-  </div>
-
-  <div class="content" id="content-tutorial" style="display:none;">
-    <h2>Tutorial cara ii untuk membuat teh panas</h2>
+<div class="content" id="content-home" style="display:none;">
+    <h1>Home</h1>
     <div class="item row">
-      Resepi air teh o panas
-      1.
-      
-      1 uncang teh2.
-      
-      500ml air panas3.
-      
-      2 1/2 sudu besar gula
-      Cara-cara
-      1.
-      
-      Masak air hingga mendidih menggunakan pemanas air2.
-      
-      Masukkan air panas ke dalam teko3.
-      
-      Masukkan uncang teh dan rendam sekejap4.
-      
-      Keluarkan uncang the5.
-      
-      Masukkan gula6.
-      
-      Kacau7.
-      
-      Siap untuk dihidang
+        <h5>Welcome to my bitkraf<img src="favicon.ico" style="background-color: black;"> layout</h5>
+        <strong>Q: What is bitkraf layout?</strong><br>
+        <i>A: It is initaitive way of learning designing layout and learning javascript,html,css</i>
+
+        <br><br>
+        <strong>Q: What language use?</strong><br>
+        <i>A: Html, CSS & Javascript</i>
+
+        <br><br>
+        <strong>Q: Where can I use this?</strong><br>
+        <i>A: On browser</i>
+
+        <br><br>
+        <strong>Q: How to use ?</strong><br>
+        <i>A: yes</i>
     </div>
-  </div>
-  
-  <!-- sekadar konten end -->
+        <div class="item row">
+            <i><strong>Where does it come from?</strong></i>
+                <p style="text-indent: 20px">Contrary to popular belief, <strong>Lorem Ipsum is not simply random text.</strong> It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <br>
+                <p style="text-indent: 20px">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+</div>
+<div class="content" id="content-contact" style="display:none;">
+    <h1>Contact Me</h1>
+    <div class="item row">
+      <h1><a href="mailto:misaworkietime@gmail.com">misaworkietime@gmail.com</a></h1>
+      [<a href="#!" onClick="(function(){navigator.clipboard.writeText('misaworkietime@gmail.com')})();">copy e-mail</a>]
+    </div>
+</div>
+<div class="content" id="content-login" style="display:none;">
+    <h1>Logan</h1>
+    <div class="item row">
+        <img src="dump/logan.png">
+    </div>
+</div>
+<div class="content" id="content-layout" style="display:none;">
+    <h1>Layout Features</h1>
+    <span>This layout use container
+
+</div>
+<div class="content" id="content-menu" style="display:none;">
+    <h1>Menu Features</h1>
+</div>
+<div class="content" id="content-form" style="display:none;">
+    <h1>Form Features</h1>
+</div>
+
 <script src="dump/script.js"></script>
 <script src="dump/menu.js"></script>
 </body>
 </html>
-

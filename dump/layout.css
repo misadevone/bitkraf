@@ -255,7 +255,7 @@ div.float-menu-mobile-toggle {
     
     div#float-menu-mobile {
         background-color: #070f2233;
-        border: 2px double yellow;
+        border: 2px double red;
         /* display: block; */
         position: fixed;
         bottom: 20vh;
