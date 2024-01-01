@@ -2,6 +2,7 @@
 // menu list
 const conf_menu = ['home', 'contact', ['Components','layout','menu','form', 'login'],['Reference', 'external-w3schools.com', 'external-google.com']];
 
+const viewDir = "./dump/view/";
 // const contentMain = document.getElementById("main-content");
 const targetLoc = document.querySelectorAll('[data-view-target]');
 const menuLoc = document.querySelectorAll('[data-build-menu]');
@@ -85,7 +86,15 @@ function assembleMenu(type, item) {
     return a;
 }
 
-function loadContent(e){
-    var d = document.getElementById("content-"+e);
-    targetLoc[0].innerHTML = d.innerHTML;
+
+async function loadContent(e){
+    targetLoc[0].innerHTML = "<div class='sophisticated-loading-bra'></div>";
+    let response = await fetch(viewDir+e+".html");
+    let data = await response.text();
+    
+    console.log(data.status); 
+    targetLoc[0].innerHTML = data;
+    
+    // var d = document.getElementById("content-"+e);
+    // targetLoc[0].innerHTML = d.innerHTML;
 }

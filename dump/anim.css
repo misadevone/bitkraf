@@ -1,0 +1,12 @@
+a {
+    transition: 0.3s;
+}
+
+.wrapper,
+.full-width {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.floating-container { transition: 0.1s; }
+.floating-container.plop { transition: 0.2s; }

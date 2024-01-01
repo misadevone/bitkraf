@@ -4,6 +4,7 @@
     <!-- <link rel="stylesheet" href="dump/style.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="dump/layout.css">
+    <link rel="stylesheet" href="dump/anim.css">
     <title>misadevone.github.io</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
@@ -22,6 +23,7 @@
             <div class="item row mobile-hide" data-build-menu="col"></div>
             
             <input type="button" value="Toggle Width" id="btn-tgl-width"></button>  
+            <input type="button" value="Float Box" onClick="togglePlopBox('float-box-1', 'open')"></button>  
         </div>
 
         <div class="container">
@@ -87,12 +89,42 @@
 
 
     <!-- overlay layout start -->
-    <div id="float-overlay" onClick="toggleView('float-menu-mobile')">Heloz</div>
 
-    <div class="float-menu-mobile-toggle">
-        <br><br>
-          <center><a href="#!" onClick="toggleView('float-menu-mobile')" style="padding:20px">[Menu]</a>
+    <!-- this floating container need jakakrip -->
+    <div class="floating-container" id="float-box-1">
+        <div class="container">
+            <input type="button" value="Close Box" onClick="togglePlopBox('float-box-1', 'close', '')"></button> 
+            <div class="item row">
+                <p style="text-indent: 20px">Contrary to popular belief, <strong>Lorem Ipsum is not simply random text.</strong> It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <br>
+                        <p style="text-indent: 20px">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            </div>
+        </div>
     </div>
+
+    </div>
+
+    <div id="float-overlay">overlay</div>
+
+    <!-- mobile menu set start-->
+    <div class="floating-container" id="float-box-mobile-menu">
+        <div class="item col-2">
+            <h5>Welcome: User 1</h5>
+                    <img src="dump/profile-pic.jpg" width="100%">
+                
+        </div><div class="item col-2">
+            <span style="display: block;">Status: on pine</span>
+            <a href="#!" style="display: block;">[Profile]</a>
+            <a href="#!" style="display: block;">[Register]</a>
+            <a href="#!" style="display: block;">[Logout]</a>
+        </div>
+            <div class="item row" data-build-menu="row">
+                
+            </div>
+    </div>
+
+    <button class="float-menu-mobile-toggle" onClick="togglePlopBox('float-box-mobile-menu')"> M e n u</button>
+    <!-- <button class="float-menu-mobile-toggle" onClick="toggleView('float-menu-mobile')"> M e n u</button> -->
     <div id="float-menu-mobile">
         <div class="container">
             <div class="item row" data-build-menu="row">
@@ -100,6 +132,8 @@
             </div>
         </div>
     </div>
+    <!-- mobile menu set end-->
+
     <!-- <div class="float-menu" id="flm1">
         <a href="#!" onClick="tglSide()">
             <i class="fa fa-address-book" style="font-size:36px"></i>
